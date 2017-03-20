@@ -94,7 +94,7 @@
 <meta property="og:description" content="安装前提安装 Hexo 相当简单。然而在安装前，您必须检查电脑中是否已安装下列应用程序：    Node.js    Git
 安装 Git    Linux (Ubuntu, Debian)：sudo apt-get install git-core
 安装 Node.js安装 Node.js 的最佳方式是使用 nvm。cURL:$ curl https://raw.github.com/creat">
-<meta property="og:updated_time" content="2017-03-19T13:53:46.411Z">
+<meta property="og:updated_time" content="2017-03-20T03:12:43.808Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ubuntu Hexo 配置">
 <meta name="twitter:description" content="安装前提安装 Hexo 相当简单。然而在安装前，您必须检查电脑中是否已安装下列应用程序：    Node.js    Git
@@ -323,6 +323,8 @@
 <p><b>最后要配置好SSH KEY</b><br>生成KEY的命令如下：<br>$ ssh-keygen -t rsa -C “emailaddress”（emailaddree此入添写你自己的邮箱地址）<br>例如我自己的操作如下：<br>$ ssh-keygen -t rsa -C “yjicfdx@gmail.com”<br>之后使用命令cd ~/.ssh进入文件夹，使用gedit id_rsa.pub 打开id_rsa.pub文件。文件里面的内容就是ssh公钥，将其全部复制。</p>
 <p>linux下github配置方法<br>（注）出现以上提示表示，成功创建，期间会有提示按回车跟输入密码.建议一路回车按默认值即可。</p>
 <p>增加ssh key 到github中<br>（1、如果你有多台电脑同步代码，建议将title填写为地名，尽量不要使用中文）（２、key框中，请查看home文件夹中的.ssh/id_rsa.pub 将文件里面的文本全部复制到Key框中即可；<br>至此github配置完毕。<br>下面我们进行同步测试<br>git clone git@github.com:账号名/仓库名<br>npm install hexo-deployer-git –save</p>
+<p>你需要为自己配置身份信息，打开命令行，然后输入：<br>git config –global user.name “yourname”<br>git config –global user.email “youremail”</p>
+<p>同样在_config.yml文件中，找到Deployment，然后按照如下修改：<br>deploy:<br>  type: git<br>  repo: g<em>*</em>@github.com:yourname/yourname.github.io.git<br>  branch: master</p>
 
       
     </div>
